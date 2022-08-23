@@ -1,0 +1,21 @@
+@mixin button {
+    font: {
+        family: $bodyfont;        
+        size: 14px;
+    }
+    text: {
+        decoration: none;
+           align: center;
+    }
+    color: $text-button-color;
+    padding: 12px 17px;
+    border: none;
+    border-radius: 25px;
+    @include fade-color;
+    @include card-shadow;
+    &:hover{
+        transform: scale(1.02);
+        transition: 200ms;
+        box-shadow: 8px 8px 8px 1px $shadow-color;
+    }
+}

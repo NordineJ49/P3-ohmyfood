@@ -76,13 +76,13 @@ header .logo {
   padding: 10px;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 3px 3px 1px #ababab;
+  box-shadow: 3px 3px 10px 1px #acacac;
 }
 header .logo img {
   height: 30px;
 }
 header .nav-location {
-  margin-top: 3px;
+  margin-top: 5px;
   padding: 10px 0;
   width: 100%;
   display: flex;
@@ -106,15 +106,30 @@ header .nav-content h1 {
 }
 header .nav-content p {
   margin-bottom: 20px;
+  color: #686868;
 }
 header .nav-content #explore {
-  border: none;
+  font-family: "roboto", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
   color: #FFFFFF;
-  border-radius: 25px;
   padding: 12px 17px;
+  border: none;
+  border-radius: 25px;
   background: rgb(147, 86, 220);
-  background: linear-gradient(355deg, rgb(147, 86, 220) 13%, rgb(255, 121, 218) 100%);
-  box-shadow: 3px 3px 3px 1px #ababab;
+  background: linear-gradient(355deg, #9356DC 13%, #FF79DA 100%);
+  box-shadow: 3px 3px 10px 1px #acacac;
+}
+header .nav-content #explore:hover {
+  transform: scale(1.02);
+  transition: 200ms;
+  box-shadow: 8px 8px 8px 1px #acacac;
+}
+header .nav-content #explore:hover {
+  transform: scale(1.02);
+  transition: 200ms;
+  box-shadow: 10px 10px 10px 1px #9f9f9f;
 }
 
 .function {
@@ -123,11 +138,10 @@ header .nav-content #explore {
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 50px;
-  padding: 0 20Px;
+  padding: 0 20px;
 }
 .function .article-nav a {
   display: flex;
-  align-items: center;
   width: 95%;
   margin: auto;
   padding: 20px 0;
@@ -135,16 +149,35 @@ header .nav-content #explore {
   color: inherit;
   border-radius: 20px;
   background-color: #F2F2F2;
-  box-shadow: 3px 3px 3px 1px #ababab;
+  box-shadow: 3px 3px 10px 1px #acacac;
+}
+.function .article-nav a:hover {
+  background-color: #e4d5f6;
+}
+.function .article-nav a:hover i {
+  color: #9356DC;
+}
+.function .article-nav a:hover:hover {
+  transform: scale(1.02);
+  transition: 200ms;
+  box-shadow: 10px 10px 10px 1px #9f9f9f;
 }
 .function .article-nav a div {
   display: flex;
-  width: 40%;
-  margin: auto;
-  justify-content: space-between;
+  align-items: center;
+}
+.function .article-nav a div:nth-child(1) {
+  width: 10%;
+  margin-left: -10px;
+}
+.function .article-nav a div:nth-child(2) {
+  width: 15%;
+  justify-content: center;
+}
+.function .article-nav a div:nth-child(3) {
+  margin-left: 10px;
 }
 .function .article-nav a span {
-  margin-left: -15px;
   padding: 2px 7px;
   color: #FFFFFF;
   border: 1px solid #9356DC;
@@ -153,7 +186,6 @@ header .nav-content #explore {
 }
 .function .article-nav a i {
   color: #686868;
-  margin-left: -70px;
 }
 
 .restaurant {
@@ -167,32 +199,27 @@ header .nav-content #explore {
   margin-bottom: 30px;
   background-color: #FFFFFF;
   border-radius: 20px;
-  box-shadow: 3px 3px 3px 1px #ababab;
+  box-shadow: 3px 3px 10px 1px #acacac;
 }
-.restaurant img {
+.restaurant figure:hover {
+  transform: scale(1.02);
+  transition: 200ms;
+  box-shadow: 10px 10px 10px 1px #9f9f9f;
+}
+.restaurant figure img {
   width: 100%;
   height: 200px;
   border-radius: 20px 20px 0 0;
   object-fit: cover;
   object-position: bottom;
 }
-.restaurant .card-figcaption {
+.restaurant figure figcaption {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 25px 15px 15px;
 }
-.restaurant .card-figcaption h3 {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-.restaurant .card-figcaption .card-location {
-  margin: 0;
-}
-.restaurant .card-figcaption .fa-heart:hover {
-  color: #FF79DA;
-}
-.restaurant .card-figcaption i {
+.restaurant figure figcaption i {
   font-size: 22px;
 }
 
