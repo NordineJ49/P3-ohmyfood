@@ -1,0 +1,22 @@
+footer{
+    background-color: $footer-color;
+    color: $footer-text-color;
+    ul{
+        list-style-type: none;
+        padding: 0 20px 20px 20px;
+        margin: 0;
+        li{
+            margin-bottom: 5px;
+        }
+        li:nth-child(1){
+            font-weight: 500;
+            display: flex;
+            gap: 20px;
+        }
+        li:nth-child(2){
+            font-weight: 500;
+            display: flex;
+            gap: 14px;
+        }
+    }
+}

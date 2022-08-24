@@ -1,0 +1,90 @@
+.function{
+    @include article-padding;
+    @include margin-top;
+    @include gap;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .article-nav a{
+        @include card-shadow;
+        @include article-nav-hover;
+        display: flex;
+        padding: 20px 0;
+        text-decoration: none;
+        color: inherit;
+        border-radius: 20px;
+        background-color: $background-color;
+        div{
+            display: flex;
+            align-items: center;
+                &:nth-child(1){
+                    width: 10%;
+                    margin-left: -10px;
+                }
+                &:nth-child(2){
+                    width: 15%;
+                    justify-content: center;
+                }
+                &:nth-child(3){
+                    margin-left: 10px;
+                }
+        }
+        span{
+            padding: 2px 7px;
+            color: $card-color;
+            border: 1px solid $primary;
+            border-radius: 25px;
+            background-color: $primary;
+        }
+        i{
+            color: $grey-color;
+        }
+    }
+}
+
+.restaurant{
+    @include article-padding;
+    @include margin-top;
+    @include gap;
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    figure{
+        @include element-hover;
+        @include card-shadow;
+        background-color: $card-color;
+        border-radius: 20px;
+        .new{
+            position: absolute;
+            right: 40px;
+            top: 10px;
+        }
+        img{
+            width: 100%;
+            height: 200px;
+            border-radius: 20px 20px 0 0;
+            object-fit: cover;
+            object-position: 50% 75%;
+        }
+        figcaption{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 25px 15px 15px; 
+            i{
+                font-size: 22px;
+            }
+        }
+    
+    
+    }
+}
+.restaurant{
+    img{
+        width: 100%;
+        height: 200px;
+        border-radius: 20px 20px 0 0;
+        object-fit: cover;
+        object-position: bottom;
+    }
+}

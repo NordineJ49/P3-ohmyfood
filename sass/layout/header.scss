@@ -1,0 +1,9 @@
+header{
+    background-color: $card-color;
+    padding: 5px;
+    justify-content: center;
+    @include card-shadow;
+    img{
+            height: 30px;
+    }   
+}

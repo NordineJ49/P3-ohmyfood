@@ -1,0 +1,74 @@
+@mixin fade-color {
+    background: rgb(147,86,220);
+    background: linear-gradient(355deg, $primary 13%, $secondary 100%);    
+}
+@mixin heart-color {
+    color: $secondary;
+    color: linear-gradient(90deg, rgba(255,121,218,1) 39%, rgba(147,101,220,1) 100%);
+}
+
+// hover
+@mixin element-hover {
+    &:hover{
+        transform: scale(1.01);
+        transition: 200ms;
+        box-shadow: 10px 10px 10px 1px darken($color: $shadow-color, $amount: 5%);
+    }
+}
+@mixin i-hover{
+    &:hover{
+        @include heart-color;
+    }
+}
+@mixin article-nav-hover{
+    &:hover{
+        background-color: lighten($color: $primary, $amount: 30%);
+        i{
+            color: $primary;
+        }
+        @include element-hover;
+    }
+}
+
+// shadow
+@mixin card-shadow{
+    box-shadow: 3px 3px 10px 1px $shadow-color;
+}
+
+// card page-menu
+@mixin card-menu {
+    @include card-shadow;
+    @include element-hover;
+    font-family: $bodyfont;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-radius: 20px;
+    padding: 10px;    
+}
+
+// article-margin
+@mixin article-padding{
+    padding: 40px 20px;    
+}
+@mixin margin-top {
+    margin-top: 30px;  
+}
+@mixin gap{
+    gap: 15px;
+}
+@mixin h3-margin{
+    padding-bottom: 5px;
+}
+
+// section-title margin
+@mixin section-title-margin{
+    padding: 30px 20px 10px 20px;    
+}
+
+// button-margin
+@mixin button-margin {
+    margin: 20px 0 60px 0;
+    padding: 15px 40px;
+}
