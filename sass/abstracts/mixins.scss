@@ -1,5 +1,4 @@
 @mixin fade-color {
-    background: rgb(147,86,220);
     background: linear-gradient(355deg, $primary 13%, $secondary 100%);    
 }
 @mixin heart-color {
@@ -35,19 +34,6 @@
     box-shadow: 3px 3px 10px 1px $shadow-color;
 }
 
-// card page-menu
-@mixin card-menu {
-    @include card-shadow;
-    @include element-hover;
-    font-family: $bodyfont;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-radius: 20px;
-    padding: 10px;    
-}
-
 // article-margin
 @mixin article-padding{
     padding: 40px 20px;    
@@ -71,4 +57,29 @@
 @mixin button-margin {
     margin: 20px 0 60px 0;
     padding: 15px 40px;
+}
+
+// heart icon
+@mixin heart-1{
+    &:hover{
+        display: none;
+    }        
+}
+@mixin heart-2{
+    position: absolute;
+    color: transparent;
+    &:hover{
+        @include fade-color;
+        @keyframes heart-animation{
+            from{
+                background-size: 0 100%;
+                }
+            to{
+                background-size: 100% 100%;
+            }
+        }
+        -webkit-background-clip: text;
+        background-repeat: no-repeat;
+        animation: animation-like-button 5s linear;
+    }
 }

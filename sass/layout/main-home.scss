@@ -26,9 +26,9 @@
             }
         }
         span{
+            margin-left: -10px;
             padding: 2px 7px;
             color: $card-color;
-            border: 1px solid $primary;
             border-radius: 25px;
             background-color: $primary;
         }
@@ -75,7 +75,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 25px 15px 15px; 
+            padding: 10px 25px 15px 15px;
+            .heart-1{
+                @include heart-1
+            }
+            .heart-2{
+                @include heart-2
+            }
             }    
     }
 }

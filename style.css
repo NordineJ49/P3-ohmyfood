@@ -44,20 +44,43 @@ td, th {
   padding: 0;
 }
 
-header {
+.home-header {
   background-color: #FFFFFF;
-  padding: 5px;
+  padding: 10px;
+  display: flex;
   justify-content: center;
   box-shadow: 3px 3px 10px 1px #acacac;
 }
-header img {
-  height: 30px;
+
+.menu-page-header {
+  padding: 10px;
+}
+.menu-page-header h1 {
+  display: flex;
+  justify-content: center;
+}
+.menu-page-header i {
+  font-size: 24px;
+  position: absolute;
+  top: 20px;
+  left: 25px;
+}
+
+.menu-main-header {
+  padding: 30px 20px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 30px 30px 0 0;
+  background-color: #F2F2F2;
+  position: relative;
+  margin-top: -40px;
+  box-shadow: none;
 }
 
 nav .nav-location {
   margin-top: 5px;
   padding: 10px 0;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,13 +113,13 @@ nav .nav-content #explore {
   padding: 12px 17px;
   border: none;
   border-radius: 25px;
-  background: rgb(147, 86, 220);
   background: linear-gradient(355deg, #9356DC 13%, #FF79DA 100%);
   box-shadow: 3px 3px 10px 1px #acacac;
 }
 nav .nav-content #explore:hover {
   transform: scale(1.02);
   transition: 200ms;
+  filter: brightness(1.2);
   box-shadow: 8px 8px 8px 1px #acacac;
 }
 nav .nav-content #explore:hover {
@@ -145,9 +168,9 @@ nav .nav-content #explore:hover {
   padding-left: 7%;
 }
 .function .article-nav a span {
+  margin-left: -10px;
   padding: 2px 7px;
   color: #FFFFFF;
-  border: 1px solid #9356DC;
   border-radius: 25px;
   background-color: #9356DC;
 }
@@ -200,6 +223,27 @@ nav .nav-content #explore:hover {
   align-items: center;
   padding: 10px 25px 15px 15px;
 }
+.restaurant figure figcaption .heart-1:hover {
+  display: none;
+}
+.restaurant figure figcaption .heart-2 {
+  position: absolute;
+  color: transparent;
+}
+.restaurant figure figcaption .heart-2:hover {
+  background: linear-gradient(355deg, #9356DC 13%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  background-repeat: no-repeat;
+  animation: animation-like-button 5s linear;
+}
+@keyframes heart-animation {
+  from {
+    background-size: 0 100%;
+  }
+  to {
+    background-size: 100% 100%;
+  }
+}
 
 .restaurant img {
   width: 100%;
@@ -233,7 +277,6 @@ footer ul li:nth-child(2) {
 }
 
 body {
-  max-width: 768px;
   margin: 0;
   font-family: "roboto", sans-serif;
 }
@@ -243,9 +286,10 @@ a {
   color: inherit;
 }
 
-h1 {
+h1, .menu-page-h2 {
   font-family: "shrikhand";
   font-size: 30px;
+  font-weight: 500;
 }
 
 h2 {
@@ -271,64 +315,77 @@ h5 {
   font-size: 22px;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-header h1 {
-  width: 60%;
-  margin: auto;
-}
-
 .image-page-menu {
   width: 100%;
   object-fit: cover;
 }
 
-section {
+.menu-main {
   background-color: #F2F2F2;
 }
-section .section-title {
-  padding: 30px 20px 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 30px 30px 0 0;
-  background-color: #F2F2F2;
-  position: relative;
-  margin-top: -40px;
-}
-section .menu-page-article {
+.menu-main .menu-section {
   padding: 40px 20px;
   gap: 15px;
   display: flex;
   flex-direction: column;
 }
-section .menu-page-article h3 {
+.menu-main .menu-section h3 {
   padding-bottom: 5px;
 }
-section .card {
+.menu-main .menu-section .menu {
   box-shadow: 3px 3px 10px 1px #acacac;
   font-family: "roboto", sans-serif;
-  width: 100%;
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
-  border-radius: 20px;
-  padding: 10px;
 }
-section .card:hover {
+.menu-main .menu-section .menu:hover {
   transform: scale(1.01);
   transition: 200ms;
   box-shadow: 10px 10px 10px 1px #9f9f9f;
 }
-section .button-order {
+.menu-main .menu-section .menu:hover .check {
+  margin-right: -1px;
+  transition: 500ms;
+}
+.menu-main .menu-section .menu:hover .check i {
+  transform: rotate(-360deg);
+  transition: 550ms;
+}
+.menu-main .menu-section .menu-card {
+  padding: 10px;
+  width: 230px;
+}
+.menu-main .menu-section .menu-card h4, .menu-main .menu-section .menu-card p {
+  text-overflow: ellipsis;
+}
+.menu-main .menu-section .price {
+  display: flex;
+  overflow: hidden;
+}
+.menu-main .menu-section .price p {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 20px 10px 10px;
+}
+.menu-main .menu-section .price .check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 100%;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0;
+  color: white;
+  font-size: 24px;
+  margin-right: -73px;
+}
+.menu-main .button-order {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-section .button-order .order {
+.menu-main .button-order .order {
   font-family: "roboto", sans-serif;
   font-size: 14px;
   text-decoration: none;
@@ -337,15 +394,15 @@ section .button-order .order {
   padding: 12px 17px;
   border: none;
   border-radius: 25px;
-  background: rgb(147, 86, 220);
   background: linear-gradient(355deg, #9356DC 13%, #FF79DA 100%);
   box-shadow: 3px 3px 10px 1px #acacac;
   margin: 20px 0 60px 0;
   padding: 15px 40px;
 }
-section .button-order .order:hover {
+.menu-main .button-order .order:hover {
   transform: scale(1.02);
   transition: 200ms;
+  filter: brightness(1.2);
   box-shadow: 8px 8px 8px 1px #acacac;
 }
 

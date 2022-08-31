@@ -1,32 +1,11 @@
-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    div{
-    }
-    h1{
-        width: 60%;
-        margin: auto;
-    }
-}
 .image-page-menu{
     width: 100%;
     object-fit: cover;
 }
-section{
+.menu-main{
     background-color: $background-color;
-    .section-title{
-        @include section-title-margin;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 30px 30px 0 0;
-        background-color: $background-color;
-        position: relative;
-        margin-top: -40px
-    }
     
-    .menu-page-article{
+    .menu-section{
         @include article-padding;
         @include gap;
         display: flex;
@@ -34,12 +13,53 @@ section{
         h3{
             @include h3-margin;
         }
+        .menu{
+            @include card-shadow;
+            @include element-hover;
+            font-family: $bodyfont;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            &:hover{
+                .check{
+                    margin-right: -1px;
+                    transition: 500ms;
+                    i{
+                        transform: rotate(-360deg);
+                        transition: 550ms;
+                    }
+                }
+            }
+        }
+            .menu-card{
+                padding: 10px;
+                width: 230px;
+                h4, p{
+                    text-overflow: ellipsis;               
+                }
+            }                           
+            .price{
+                display: flex;                
+                overflow: hidden;
+                p{
+                    display: flex;
+                    align-items: flex-end;
+                    margin: 0 20px 10px 10px;
+                }
+                .check{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 70px;
+                    height: 100%;
+                    background-color: $tertiary;
+                    border-radius: 0 20px 20px 0;
+                    color: white;
+                    font-size: 24px;
+                    margin-right: -73px;
+                }
+            }
     }
-    
-    .card{
-        @include card-menu;
-    }
-    
     .button-order{
         width: 100%;
         display: flex;

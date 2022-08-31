@@ -1,5 +1,4 @@
 body{
-    max-width: 768px;
     margin: 0;
     font-family: $bodyfont;
 }
@@ -7,9 +6,10 @@ a{
     text-decoration: none;
     color: inherit;
 }
-h1{
+h1, .menu-page-h2{
     font-family: $logofont;
     font-size: 30px;
+    font-weight: 500;
 }
 h2{
     font-weight: 800;
