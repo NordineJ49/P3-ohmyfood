@@ -59,6 +59,7 @@
                 object-fit: cover;
                 object-position: 50% 75%;
             }
+
             .new{
                 position: absolute;
                 top: 15px;
@@ -76,21 +77,17 @@
             justify-content: space-between;
             align-items: center;
             padding: 10px 25px 15px 15px;
-            .heart-1{
-                @include heart-1
+            position: relative;
+            @include hearts-hover;
+            i{
+                font-size: 24px;
+                top: 30%;
+                right: 30px;
+                position: absolute;
             }
-            .heart-2{
-                @include heart-2
+            .fas{
+                @include hearts;
             }
-            }    
-    }
-}
-.restaurant{
-    img{
-        width: 100%;
-        height: 200px;
-        border-radius: 20px 20px 0 0;
-        object-fit: cover;
-        object-position: bottom;
+        }
     }
 }

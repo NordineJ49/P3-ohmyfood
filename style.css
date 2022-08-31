@@ -65,6 +65,10 @@ td, th {
   top: 20px;
   left: 25px;
 }
+.menu-page-header i:hover {
+  transform: scale(1.2);
+  transition: 200ms;
+}
 
 .menu-main-header {
   padding: 30px 20px 10px 20px;
@@ -76,6 +80,27 @@ td, th {
   position: relative;
   margin-top: -40px;
   box-shadow: none;
+}
+.menu-main-header:hover .fas {
+  opacity: 1;
+  transition: 500ms;
+  transform: scale(1.1);
+}
+.menu-main-header:hover .far {
+  opacity: 0;
+}
+.menu-main-header i {
+  font-size: 24px;
+  top: 30%;
+  right: 30px;
+  position: absolute;
+}
+.menu-main-header .fas {
+  background: linear-gradient(355deg, #9356DC 13%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
 }
 
 nav .nav-location {
@@ -222,35 +247,28 @@ nav .nav-content #explore:hover {
   justify-content: space-between;
   align-items: center;
   padding: 10px 25px 15px 15px;
+  position: relative;
 }
-.restaurant figure figcaption .heart-1:hover {
-  display: none;
+.restaurant figure figcaption:hover .fas {
+  opacity: 1;
+  transition: 500ms;
+  transform: scale(1.1);
 }
-.restaurant figure figcaption .heart-2 {
+.restaurant figure figcaption:hover .far {
+  opacity: 0;
+}
+.restaurant figure figcaption i {
+  font-size: 24px;
+  top: 30%;
+  right: 30px;
   position: absolute;
-  color: transparent;
 }
-.restaurant figure figcaption .heart-2:hover {
+.restaurant figure figcaption .fas {
   background: linear-gradient(355deg, #9356DC 13%, #FF79DA 100%);
+  background-clip: text;
   -webkit-background-clip: text;
-  background-repeat: no-repeat;
-  animation: animation-like-button 5s linear;
-}
-@keyframes heart-animation {
-  from {
-    background-size: 0 100%;
-  }
-  to {
-    background-size: 100% 100%;
-  }
-}
-
-.restaurant img {
-  width: 100%;
-  height: 200px;
-  border-radius: 20px 20px 0 0;
-  object-fit: cover;
-  object-position: bottom;
+  color: transparent;
+  opacity: 0;
 }
 
 footer {

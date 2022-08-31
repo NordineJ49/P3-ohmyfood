@@ -14,11 +14,6 @@
         box-shadow: 10px 10px 10px 1px darken($color: $shadow-color, $amount: 5%);
     }
 }
-@mixin i-hover{
-    &:hover{
-        @include heart-color;
-    }
-}
 @mixin article-nav-hover{
     &:hover{
         background-color: lighten($color: $primary, $amount: 30%);
@@ -60,26 +55,22 @@
 }
 
 // heart icon
-@mixin heart-1{
-    &:hover{
-        display: none;
-    }        
-}
-@mixin heart-2{
-    position: absolute;
+@mixin hearts {
+    @include fade-color;
+    background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
+    opacity: 0;    
+}
+@mixin hearts-hover {
     &:hover{
-        @include fade-color;
-        @keyframes heart-animation{
-            from{
-                background-size: 0 100%;
-                }
-            to{
-                background-size: 100% 100%;
-            }
+        .fas{
+            opacity: 1;
+            transition: 500ms;
+            transform: scale(1.1);
         }
-        -webkit-background-clip: text;
-        background-repeat: no-repeat;
-        animation: animation-like-button 5s linear;
-    }
+        .far{
+            opacity: 0;
+        }
+    }    
 }
