@@ -1,5 +1,15 @@
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap");
+@keyframes appear {
+  0% {
+    transform: translateY(75%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -294,29 +304,6 @@ footer ul li:nth-child(2) {
   gap: 14px;
 }
 
-.loader {
-  filter: none;
-  width: 100%;
-  height: 100%;
-  background: #ffffff;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.loader span {
-  background: linear-gradient(355deg, #9356DC 13%, #FF79DA 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  width: 100px;
-  margin: 20px;
-  font-family: "shrikhand", sans-serif;
-  font-size: 24px;
-  border-radius: 50%;
-}
-
 body {
   margin: 0;
   font-family: "roboto", sans-serif;
@@ -373,31 +360,45 @@ h5 {
 .menu-main .menu-section h3 {
   padding-bottom: 5px;
 }
-.menu-main .menu-section .menu {
+.menu-main .menu-section .menu-item {
   box-shadow: 3px 3px 10px 1px #acacac;
   font-family: "roboto", sans-serif;
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
+  animation: appear 2s both;
 }
-.menu-main .menu-section .menu:hover {
+.menu-main .menu-section .menu-item:hover {
   transform: scale(1.01);
   transition: 200ms;
   box-shadow: 10px 10px 10px 1px #9f9f9f;
 }
-.menu-main .menu-section .menu:hover .check {
+.menu-main .menu-section .menu-item:nth-child(1) {
+  animation-delay: 100ms;
+}
+.menu-main .menu-section .menu-item:nth-child(2) {
+  animation-delay: 200ms;
+}
+.menu-main .menu-section .menu-item:nth-child(3) {
+  animation-delay: 300ms;
+}
+.menu-main .menu-section .menu-item:nth-child(4) {
+  animation-delay: 400ms;
+}
+.menu-main .menu-section .menu-item:nth-child(5) {
+  animation-delay: 500ms;
+}
+.menu-main .menu-section .menu-item:hover .check {
   margin-right: -1px;
   transition: 500ms;
 }
-.menu-main .menu-section .menu:hover .check i {
+.menu-main .menu-section .menu-item:hover .check i {
   transform: rotate(-360deg);
   transition: 550ms;
 }
 .menu-main .menu-section .menu-card {
   padding: 10px;
-  width: 230px;
-}
-.menu-main .menu-section .menu-card h4, .menu-main .menu-section .menu-card p {
+  width: 50%;
   text-overflow: ellipsis;
 }
 .menu-main .menu-section .price {
@@ -445,6 +446,64 @@ h5 {
   transition: 200ms;
   filter: brightness(1.2);
   box-shadow: 8px 8px 8px 1px #acacac;
+}
+
+.loader-div {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  opacity: 0.99;
+  animation: disappear 75ms 4s forwards;
+  transform-origin: top;
+}
+
+.loader-title {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: transparent;
+  background: linear-gradient(355deg, #9356DC 13%, #FF79DA 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: "shrikhand", sans-serif;
+  animation: animate 3s linear 0s;
+}
+
+.loader {
+  height: 7px;
+  display: inline-block;
+  background: linear-gradient(355deg, #9356DC 13%, #FF79DA 100%);
+  border-radius: 20px;
+  margin-right: -5px;
+  box-shadow: 0 0 10px #686868;
+  box-sizing: border-box;
+  animation: anim 4s ease-in-out 0s;
+}
+
+@keyframes anim {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes animate {
+  0% {
+    width: 0%;
+  }
+}
+@keyframes disappear {
+  to {
+    transform: scale(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

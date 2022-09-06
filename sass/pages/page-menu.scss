@@ -13,13 +13,19 @@
         h3{
             @include h3-margin;
         }
-        .menu{
+        .menu-item{
             @include card-shadow;
             @include element-hover;
             font-family: $bodyfont;
             border-radius: 20px;
             display: flex;
             justify-content: space-between;
+            animation: appear 2s both;
+            @for $i from 1 through 5{
+                &:nth-child(#{$i}){
+                    animation-delay: 100ms * $i;
+                }
+            }
             &:hover{
                 .check{
                     margin-right: -1px;
@@ -33,10 +39,8 @@
         }
             .menu-card{
                 padding: 10px;
-                width: 230px;
-                h4, p{
-                    text-overflow: ellipsis;               
-                }
+                width: 50%;
+                text-overflow: ellipsis;
             }                           
             .price{
                 display: flex;                
