@@ -1,13 +1,14 @@
 .home-header{
-    background-color: $card-color;
+    background-color: $background-color;
     padding: 10px;
     display: flex;
     justify-content: center;
-    @include card-shadow;  
+    @include card-shadow; 
 }
 
 .menu-page-header{
     padding: 10px;
+    background-color: $background-color;
     h1{
         display: flex;
         justify-content: center;
