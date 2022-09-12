@@ -16,8 +16,8 @@
         .menu-item{
             @include card-shadow;
             @include element-hover;
+            border-radius: 15px;            
             font-family: $bodyfont;
-            border-radius: 20px;
             display: flex;
             justify-content: space-between;
             animation: appear 2s both;
@@ -38,12 +38,15 @@
             }
         }
             .menu-card{
-                padding: 10px;
-                width: 50%;
-                text-overflow: ellipsis;
+                padding: 15px;
+                h4, p{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
             }                           
             .price{
-                display: flex;                
+                display: flex;
                 overflow: hidden;
                 p{
                     display: flex;
@@ -57,7 +60,7 @@
                     width: 70px;
                     height: 100%;
                     background-color: $tertiary;
-                    border-radius: 0 20px 20px 0;
+                    border-radius: 0 15px 15px 0;
                     color: white;
                     font-size: 24px;
                     margin-right: -73px;

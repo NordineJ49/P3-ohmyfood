@@ -1,10 +1,6 @@
 @mixin fade-color {
     background: linear-gradient(355deg, $primary 13%, $secondary 100%);    
 }
-@mixin heart-color {
-    color: $secondary;
-    color: linear-gradient(90deg, $primary 39%, $secondary 100%);
-}
 
 // hover
 @mixin element-hover {
@@ -54,6 +50,16 @@
     padding: 15px 40px;
 }
 
+// card home and menu
+@mixin card-home {
+    padding: 25px 0;
+    border-radius: 15px;    
+}
+@mixin card-menu {
+    padding: 10px;
+    border-radius: 15px;
+}
+
 // heart icon
 @mixin hearts {
     @include fade-color;
@@ -66,8 +72,8 @@
     &:hover{
         .fas{
             opacity: 1;
-            transition: 500ms;
-            transform: scale(1.1);
+            transition: 1s;
+            transform: scale(1);
         }
         .far{
             opacity: 0;
@@ -75,7 +81,7 @@
     }    
 }
 
-// animation
+// animation menu item
 @keyframes appear{
     0%{
         transform: translateY(75%);

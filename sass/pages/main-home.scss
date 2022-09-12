@@ -13,11 +13,10 @@
     .article-nav a{
         @include card-shadow;
         @include article-nav-hover;
+        @include card-home;
         display: flex;
-        padding: 20px 0;
         text-decoration: none;
         color: inherit;
-        border-radius: 20px;
         background-color: $background-color;
         div{
             display: flex;

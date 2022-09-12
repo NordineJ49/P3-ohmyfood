@@ -44,6 +44,9 @@ header,nav, main, footer{
         justify-content: space-between;
         section{
             width: 33%;
+            .menu-card{
+                width: 80%;
+            }
         }
     }
 }
