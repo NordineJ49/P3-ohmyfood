@@ -531,13 +531,12 @@ footer ul li:nth-child(2) {
     object-position: 50% 65%;
   }
   .menu-main .section_div {
-    display: flex;
-    justify-content: space-between;
     padding: 20px;
   }
   .menu-main .section_div .menu-section {
-    width: 32%;
-    padding: 0;
+    width: 80%;
+    margin: auto;
+    padding: 40px 0;
   }
 }
 .loader {
