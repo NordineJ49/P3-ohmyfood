@@ -396,9 +396,6 @@ footer ul li:nth-child(2) {
   .menu-main .section_div section {
     width: 33%;
   }
-  .menu-main .section_div section .menu-card {
-    width: 80%;
-  }
 }
 @media screen and (max-width: 991px) and (min-width: 769px) {
   .function {
@@ -431,12 +428,9 @@ footer ul li:nth-child(2) {
     justify-content: space-between;
     padding: 20px;
   }
-  .menu-main .section_div section {
+  .menu-main .section_div .menu-section {
     width: 32%;
     padding: 0;
-  }
-  .menu-main .section_div section .menu-card {
-    width: 80%;
   }
 }
 .image-page-menu {
@@ -463,6 +457,7 @@ footer ul li:nth-child(2) {
   display: flex;
   justify-content: space-between;
   animation: appear 2s both;
+  overflow: hidden;
 }
 .menu-main .menu-section .menu-item:hover {
   transform: scale(1.01);
@@ -484,32 +479,25 @@ footer ul li:nth-child(2) {
 .menu-main .menu-section .menu-item:nth-child(5) {
   animation-delay: 500ms;
 }
-.menu-main .menu-section .menu-item:hover .check {
-  margin-right: -1px;
-  transition: 500ms;
+.menu-main .menu-section .menu-item .menu-card {
+  padding: 10px;
+  overflow: hidden;
 }
-.menu-main .menu-section .menu-item:hover .check i {
-  transform: rotate(-360deg);
-  transition: 550ms;
-}
-.menu-main .menu-section .menu-card {
-  padding: 15px;
-}
-.menu-main .menu-section .menu-card h4, .menu-main .menu-section .menu-card p {
+.menu-main .menu-section .menu-item .menu-card h4, .menu-main .menu-section .menu-item .menu-card p {
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
 }
-.menu-main .menu-section .price {
+.menu-main .menu-section .menu-item .price {
   display: flex;
-  overflow: hidden;
 }
-.menu-main .menu-section .price p {
+.menu-main .menu-section .menu-item .price p {
   display: flex;
   align-items: flex-end;
-  margin: 0 20px 10px 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
-.menu-main .menu-section .price .check {
+.menu-main .menu-section .menu-item .price .check {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -520,6 +508,14 @@ footer ul li:nth-child(2) {
   color: white;
   font-size: 24px;
   margin-right: -73px;
+}
+.menu-main .menu-section .menu-item:hover .check {
+  margin-right: -1px;
+  transition: 500ms;
+}
+.menu-main .menu-section .menu-item:hover .check i {
+  transform: rotate(-360deg);
+  transition: 550ms;
 }
 .menu-main .button-order {
   width: 100%;

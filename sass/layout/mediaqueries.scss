@@ -44,9 +44,6 @@ header,nav, main, footer{
         justify-content: space-between;
         section{
             width: 33%;
-            .menu-card{
-                width: 80%;
-            }
         }
     }
 }
@@ -86,12 +83,10 @@ header,nav, main, footer{
             display: flex;
             justify-content: space-between;
             padding: 20px;
-            section{
+            .menu-section{
                 width: 32%;
                 padding: 0;
-                .menu-card{
-                    width: 80%;
-                }
+
             }
         }
     }
