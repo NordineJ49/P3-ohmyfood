@@ -518,6 +518,7 @@ footer ul li:nth-child(2) {
   footer ul {
     display: flex;
     justify-content: space-around;
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 991px) and (min-width: 851px) {
@@ -579,6 +580,7 @@ footer ul li:nth-child(2) {
   footer ul {
     display: flex;
     justify-content: space-around;
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 850px) and (min-width: 769px) {
