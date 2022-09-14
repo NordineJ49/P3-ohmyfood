@@ -47,17 +47,47 @@ header,nav, main, footer{
         }
     }
 }
+footer{
+    h5{
+        display: flex;
+        justify-content: center;
+    }
+    ul{
+        display: flex;
+        justify-content: space-around;
+    }
+}
 }
 
 
-@media screen and (max-width: 991px) and (min-width: 769px){
+@media screen and (max-width: 991px) and (min-width: 851px){
+    nav{
+        .nav-content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            height: 365px;
+            position: relative;
+            p{
+                font-size: 24px;
+            }
+            h2, p, button{
+                width: 50%;
+            }
+        }
+    }
     .function{
+        position: absolute;
+        top: 87px;
+        right: 15px;
+        width: 45%;
         padding: 20px;
         article{
             width: 95%;
             margin: auto;
             a{
-                gap: 10%;
+                gap: 5%;
             }
         }
     }
@@ -88,5 +118,85 @@ header,nav, main, footer{
             }
         }
     }
+    footer{
+        h5{
+            display: flex;
+            justify-content: center;
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
 
+}
+@media screen and (max-width: 850px) and (min-width: 769px){
+    nav{
+        .nav-content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            height: 365px;
+            position: relative;
+            p{
+                font-size: 24px;
+            }
+            h2, p, button{
+                width: 50%;
+            }
+        }
+    }
+    .function{
+        position: absolute;
+        top: 87px;
+        right: 15px;
+        width: 45%;
+        padding: 20px;
+        article{
+            width: 95%;
+            margin: auto;
+            a{
+                gap: 2%;
+            }
+        }
+    }
+    .restaurant{
+        .restaurant_items{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        a{
+            width: 48%;
+            margin: auto;
+        }
+    }
+    .menu-main{
+        img{
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 65%;
+        }
+        .section_div{
+            padding: 20px;
+            .menu-section{
+                width: 80%;
+                margin: auto;
+                padding: 40px 0;
+            }
+        }
+    }
+    footer{
+        h5{
+            display: flex;
+            justify-content: center;
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
 }
