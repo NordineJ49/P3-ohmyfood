@@ -9,13 +9,21 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  animation: desappear 100ms forwards 3s;
+  transform-origin: top;
 }
+@keyframes desappear{
+  to{
+    transform: scale(0);
+  }
+}
+
 
 .loader span 
 {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   background: #eaeef0;
   border-radius: 50%;
   border: 6px solid #eaeef0;
@@ -23,6 +31,7 @@
   8px 8px 25px rgba(0,0,0,0.15);
   overflow: hidden;
 }
+
 .loader span::before 
 {
   content: '';
@@ -71,6 +80,9 @@
   font-size: 26px;
   margin-bottom: 10px;
   animation: heartbeat 4s infinite;
+  position: absolute;
+  top: 48%;
+  z-index: 1;
 }
 @keyframes heartbeat{
   0%

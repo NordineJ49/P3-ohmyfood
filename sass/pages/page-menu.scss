@@ -21,37 +21,28 @@
             display: flex;
             justify-content: space-between;
             animation: appear 2s both;
+            overflow: hidden;
             @for $i from 1 through 5{
                 &:nth-child(#{$i}){
                     animation-delay: 100ms * $i;
                 }
             }
-            &:hover{
-                .check{
-                    margin-right: -1px;
-                    transition: 500ms;
-                    i{
-                        transform: rotate(-360deg);
-                        transition: 550ms;
-                    }
-                }
-            }
-        }
             .menu-card{
                 padding: 15px;
+                overflow: hidden;
                 h4, p{
+                    white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    white-space: nowrap;
                 }
             }                           
             .price{
                 display: flex;
-                overflow: hidden;
                 p{
                     display: flex;
                     align-items: flex-end;
-                    margin: 0 20px 10px 10px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
                 }
                 .check{
                     display: flex;
@@ -66,6 +57,17 @@
                     margin-right: -73px;
                 }
             }
+            &:hover{
+                .check{
+                    margin-right: -1px;
+                    transition: 500ms;
+                    i{
+                        transform: rotate(-360deg);
+                        transition: 550ms;
+                    }
+                }
+            }
+        }
     }
     .button-order{
         width: 100%;
