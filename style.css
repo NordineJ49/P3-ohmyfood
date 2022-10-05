@@ -149,6 +149,7 @@ h5 {
 .menu-main-header .fas:hover {
   animation: heartAnim 200ms ease-in-out;
   background-image: linear-gradient(355deg, #9356DC 13%, #FF79DA 100%);
+  scale: 1.1;
 }
 .menu-main-header i {
   font-size: 24px;
@@ -228,6 +229,10 @@ footer ul li:nth-child(2) {
   font-weight: 500;
   display: flex;
   gap: 14px;
+}
+
+a, i {
+  cursor: pointer;
 }
 
 .function {
@@ -346,6 +351,7 @@ footer ul li:nth-child(2) {
 .restaurant figure figcaption .fas:hover {
   animation: heartAnim 200ms ease-in-out;
   background-image: linear-gradient(355deg, #9356DC 13%, #FF79DA 100%);
+  scale: 1.1;
 }
 .restaurant figure figcaption i {
   font-size: 24px;
@@ -357,6 +363,10 @@ footer ul li:nth-child(2) {
 .image-page-menu {
   width: 100%;
   object-fit: cover;
+}
+
+a, i {
+  cursor: pointer;
 }
 
 .menu-main {
